@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
-    selector:"ld-button",
+    selector:"button[ld-button]",
     templateUrl: "./ld-button.component.html",
-    styleUrls:["./ld-button.component.css"]
+    styleUrls:["./ld-button.component.scss"],
+    encapsulation: ViewEncapsulation.None,
 })
 export class LdButtonComponent{
-
+    constructor(elementRef: ElementRef) {
+        // debugger;
+        elementRef.nativeElement.classList.add("ld-button");
+        }
 }
