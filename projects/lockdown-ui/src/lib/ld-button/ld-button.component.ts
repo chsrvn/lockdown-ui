@@ -8,7 +8,6 @@ import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
 })
 export class LdButtonComponent {
     constructor(elementRef: ElementRef) {
-        // debugger;
         elementRef.nativeElement.classList.add("ld-button");
     }
 }
